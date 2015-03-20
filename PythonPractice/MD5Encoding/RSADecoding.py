@@ -2,7 +2,7 @@ import rsa
 import sys
 import hashlib
 import GetKeys
-def rsaDecoding(encrption):
+def rsaDecoding():
 	# hash = hashlib.md5()
 	# hash.update('Martins')
 	# value = hash.hexdigest()
@@ -11,12 +11,15 @@ def rsaDecoding(encrption):
 	# (bob_pub, bob_priv) = rsa.newkeys(512)
 	#key = rsa.PrivateKey.load_pkcs1(GetKeys.getPrivateKey())
 	#print 'key is ',key,'\n'
-	key = rsa.PublicKeys.load_pkcs1(GetKeys.getPublickey())
+	f = open('cypher.txt','r')
+	cypher = f.read()
+	print(cypher)
+	key = rsa.PrivateKey.load_pkcs1(GetKeys.getPrivateKey())
 	# print('public key is ',bob_pub)
 	print('public key is ',key)
-	result = rsa.encrypt(encrption,key)
+	result = rsa.decrypt(cypher,key)
 
-	print('After rsa encrypting, result is ',result)
+	print('After rsa decrypting, result is ',result)
 
-rsaDecoding(sys.argv[1])
+rsaDecoding()
 

@@ -20,12 +20,12 @@ def rsaEncoding(plainText):
 	
 	print('Hashing ',plainText,' to ',value,'\n')
 	
-	#key = rsa.PrivateKey.load_pkcs1(GetKeys.getPrivateKey())
-	#print 'key is ',key,'\n'
-	key = rsa.PrivateKey.load_pkcs1(GetKeys.getPrivateKey())
-	# print('public key is ',bob_pub)
+	key = rsa.PublicKey.load_pkcs1(GetKeys.getPublicKey())
 	print('private key is ',key)
+
 	result = rsa.encrypt(value,key)
+	f = open('cypher.txt','w')
+	f.write(result)
 
 	print('After rsa decrpting, result is ',result)
 

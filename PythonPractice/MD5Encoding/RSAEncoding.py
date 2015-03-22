@@ -15,16 +15,15 @@ def rsaEncoding(plainText):
 		u will encoding word 'text'
 	"""
 	hash = hashlib.md5()
-	hash.update('Martins')
+	hash.update(plainText)
 	value = hash.hexdigest()
 	
 	print('Hashing ',plainText,' to ',value,'\n')
 	
 	key = rsa.PublicKey.load_pkcs1(GetKeys.getPublicKey())
-	print('private key is ',key)
 
-	result = rsa.encrypt(value,key)
-	f = open('cypher.txt','w')
+	result = rsa.encrypt(plainText,key)
+	f = open( 'cypher.txt','w')
 	f.write(result)
 
 	print('After rsa decrpting, result is ',result)

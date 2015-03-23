@@ -43,7 +43,7 @@ def showAllFile(pwdManageDir):
 
 def checkFileExist(fileName):
 	return os.path.exists(fileName)
-	# with open(fileName) as f:
+	# with open(fileName,'w') as f:
 	# 	f.seek(0) 	# move to the beginning of this file
 	# 	first_char = f.read(1)	#read the first word
 	# 	if not first_char:

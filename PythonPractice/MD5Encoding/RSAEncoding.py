@@ -13,19 +13,19 @@ def rsaEncoding(plainText):
 		By using 
 		python RSADecoding text 
 		u will encoding word 'text'
-	"""
-	hash = hashlib.md5()
-	hash.update(plainText)
-	value = hash.hexdigest()
-	
-	print('Hashing ',plainText,' to ',value,'\n')
-	
+	"""		
 	key = rsa.PublicKey.load_pkcs1(GetKeys.getPublicKey())
 
 	result = rsa.encrypt(plainText,key)
-	f = open( 'cypher.txt','w')
-	f.write(result)
 
-	print('After rsa decrpting, result is ',result)
+	return result
 
-rsaEncoding(sys.argv[1])
+
+
+# hash = hashlib.md5()
+# hash.update(plainText)
+# value = hash.hexdigest()
+# result = rsaEncoding(sys.argv[1])
+# print('After rsa decrpting, result is ',result)
+# f = open( 'cypher.txt','w')
+# f.write(result)

@@ -2,7 +2,7 @@ import rsa
 import sys
 import hashlib
 import GetKeys
-def rsaDecoding():
+def rsaDecoding(cypherTxt):
 	"""
 	TODO: Using md5 generate corresponding md5_cipher.txt file 
 	for each cipher text.
@@ -15,15 +15,16 @@ def rsaDecoding():
 	It will go through all files and find out phone(md5).txt and 
 	decode with my rsa private key.
 	"""
-	f = open('cypher.txt','r')
-	cypher = f.read()
-	print(cypher)
+
 	key = rsa.PrivateKey.load_pkcs1(GetKeys.getPrivateKey())
 	
-	print('public key is ',key)
-	result = rsa.decrypt(cypher,key)
+	# print('public key is ',key)
+	result = rsa.decrypt(cypherTxt,key)
 
-	print('After rsa decrypting, result is ',result)
+	# print('After rsa decrypting, result is ',result)
+	return result 
 
-rsaDecoding()
+# f = open('cypher.txt','r')
+# cypher = f.read()
+# rsaDecoding(cypher)
 

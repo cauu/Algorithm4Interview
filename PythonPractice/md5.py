@@ -2,7 +2,6 @@
 # -*- coding:utf-8 -*-
 import base64
 import sys
-import rsa
 try:
     import hashlib
     hash = hashlib.md5()

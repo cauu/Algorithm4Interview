@@ -1,12 +1,4 @@
-Algorithm4Interview
+Algorithms
 ===================
 
-Practicing common algorithm
-
-===================2014/08/02========================
-1.Implement KMP Algorithm
-=====================================================
-
-===================2014/08/03========================
-Practice Python
-=====================================================
+Practicing common algorithm in leetcode

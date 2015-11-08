@@ -47,3 +47,21 @@ str="dog cat cat dog"
 因此结果为false
 ```
 另一个思路分别映射```map<str,[pattern]>```和```map<pattern,[str]>```，若两者遵循同一模式，那么两者对应的key,value是可以互换的，映射后的数组长度都相同。
+
+###2-Isomorphic Strings
+  
+***
+####问题：
+给定string a,b，判断a,b是否遵循同一pattern。  
+如:
+  
+```
+a="abba"
+b="cddc"
+则结果为true
+```
+  
+####解决思路
+  
+***
+采用上面的思路2解答。

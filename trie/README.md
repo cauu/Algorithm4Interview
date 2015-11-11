@@ -1,4 +1,4 @@
-###Implement Trie (Prefix Tree)
+###0-Implement Trie (Prefix Tree)
   
 ***
 ####问题：
@@ -8,5 +8,5 @@
 ####解决思路
   
 ***
-没好好读书的人，到这里已经不知道trie树是什么鬼了。先好好找一篇文章读一读。  
+没好好读书的人，到这里已经不知道trie树是什么鬼了。先找篇相关的文章读一读。  
 [Trie树](http://www.cnblogs.com/huangxincheng/archive/2012/11/25/2788268.html)
